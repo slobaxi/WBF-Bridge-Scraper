@@ -1,4 +1,3 @@
 __pycache__
-scores.xlsx
-boards.lin
-~$scores.xlsx
+.venv
+*.pyc
