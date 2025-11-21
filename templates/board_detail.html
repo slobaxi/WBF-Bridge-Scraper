@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Board {{ board.BoardNumber }}</title>
+</head>
+<body>
+    <h1>Board {{ board.BoardNumber }}</h1>
+
+    <p><b>Teams:</b> {{ board.Home_Team }} vs {{ board.Visiting_Team }}</p>
+    <p><b>Room:</b> {{ board.Room }}</p>
+    <p><b>Contract:</b> {{ board.Contract }} | <b>Declarer:</b> {{ board.Declarer }}</p>
+    <p><b>Lead:</b> {{ board.Lead }}</p>
+    <p><b>Official Result:</b> NS: {{ board.NS }}, EW: {{ board.EW }}</p>
+
+    <hr>
+
+    <h2>Enter Your Result</h2>
+
+    <form method="POST" action="/board/{{ board.BoardNumber }}/submit">
+        <label>Contract:</label><br>
+        <input name="contract"><br><br>
+
+        <label>Declarer:</label><br>
+        <input name="declarer"><br><br>
+
+        <label>Tricks Made:</label><br>
+        <input name="tricks" type="number"><br><br>
+
+        <label>Your NS Score:</label><br>
+        <input name="ns" type="number"><br><br>
+
+        <label>Your EW Score:</label><br>
+        <input name="ew" type="number"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

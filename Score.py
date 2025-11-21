@@ -1,3 +1,4 @@
+
 class Score:
     def __init__(self):
         self.BoardNumber = None
@@ -30,5 +31,4 @@ class Score:
             self.Home_Result,
             self.Vis_Result
         ]
-        # Convert None to empty string and join with spaces
         return " ".join("" if v is None else str(v) for v in values)
